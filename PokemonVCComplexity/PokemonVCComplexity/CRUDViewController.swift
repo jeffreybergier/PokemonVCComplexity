@@ -8,9 +8,8 @@
 
 import UIKit
 
-class CRUDViewController: UIViewController {
+class CRUDViewController: JSBTableViewController {
     
-    var pokemon: [Pokemon] { return self.dataSource.pokemon }
     var dataSource: PokemonDataSource { return (UIApplication.sharedApplication().delegate as! AppDelegate).pokemonDataSource }
     
     @IBOutlet private weak var loadingView: LoadingView?
@@ -24,8 +23,9 @@ class CRUDViewController: UIViewController {
         }
     }
     
-    func dataUpdated() {
-        print("Pokemon Data Updated")
+    override func dataUpdated() {
+        super.dataUpdated()
+        print("Pokemon Data Updated. \(self.pokemon.count) Total Pokemon")
     }
     
 }

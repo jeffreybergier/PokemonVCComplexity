@@ -89,6 +89,7 @@
                     <navigationItem key="navigationItem" title="Pokemon" id="RWz-Pq-EVv"/>
                     <connections>
                         <outlet property="loadingView" destination="XnC-W7-Q8S" id="TJk-MQ-RxS"/>
+                        <outlet property="tableView" destination="U0g-re-gCI" id="4eg-dX-QL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkD-Nr-hfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
