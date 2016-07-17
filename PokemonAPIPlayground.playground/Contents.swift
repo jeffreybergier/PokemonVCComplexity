@@ -8,7 +8,6 @@ let pokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
 var pokemon = [NSDictionary]()
 
 func downloadDataFromEndpoint(endpoint: NSURL) {
-    XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
     let request = NSURLRequest(URL: endpoint)
     NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) in
         // quick and dirty check to make sure we have data
@@ -19,6 +18,7 @@ func downloadDataFromEndpoint(endpoint: NSURL) {
         if let p = dictionary["results"] as? [NSDictionary] {
             // append to the data
             pokemon += p
+            print(p.count)
         }
         
         // see if there are more pokemon
@@ -31,7 +31,8 @@ func downloadDataFromEndpoint(endpoint: NSURL) {
             print(pokemon.count)
             XCPlaygroundPage.currentPage.finishExecution()
         }
-    })
+    }).resume()
 }
 
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 downloadDataFromEndpoint(pokemonURL)

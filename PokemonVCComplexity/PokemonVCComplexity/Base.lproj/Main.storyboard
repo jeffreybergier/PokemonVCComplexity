@@ -1,8 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wqO-mo-ocZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oK1-md-mRP">
+            <objects>
+                <navigationController id="wqO-mo-ocZ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="izL-ae-stU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vqa-nv-ufd" kind="relationship" relationship="rootViewController" id="N3m-NU-hMe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AR-UH-cO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="461"/>
+        </scene>
+        <!--Pokemon-->
+        <scene sceneID="yKY-DA-SFv">
+            <objects>
+                <viewController title="Pokemon" id="vqa-nv-ufd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ePp-6m-1ff"/>
+                        <viewControllerLayoutGuide type="bottom" id="sXw-RN-GnK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D9k-5M-cXh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0g-re-gCI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PokemonCell" textLabel="v4N-Ab-EjS" style="IBUITableViewCellStyleDefault" id="mNh-r6-Pal">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mNh-r6-Pal" id="Qg0-YR-T6h">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Squirtle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4N-Ab-EjS">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U0g-re-gCI" firstAttribute="height" secondItem="D9k-5M-cXh" secondAttribute="height" id="SeL-EE-g6K"/>
+                            <constraint firstItem="U0g-re-gCI" firstAttribute="centerX" secondItem="D9k-5M-cXh" secondAttribute="centerX" id="axg-zU-wzT"/>
+                            <constraint firstItem="U0g-re-gCI" firstAttribute="centerY" secondItem="D9k-5M-cXh" secondAttribute="centerY" id="q5h-zb-T0z"/>
+                            <constraint firstItem="U0g-re-gCI" firstAttribute="width" secondItem="D9k-5M-cXh" secondAttribute="width" id="zxw-Je-eB5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pokemon" id="RWz-Pq-EVv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkD-Nr-hfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="461"/>
+        </scene>
+    </scenes>
 </document>
