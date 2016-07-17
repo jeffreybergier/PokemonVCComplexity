@@ -48,11 +48,23 @@ struct Pokemon {
 
 class PokemonDataSource {
     
-    var pokemon = [Pokemon]()
-    private let rootPokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
+    private(set) var pokemon = [Pokemon]()
     
+    func create(completion: SuccessHandler) {
+        // implement at some point
+    }
+    
+    private let rootPokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
     func read(completion: SuccessHandler) {
         self.downloadDataFromEndpoint(self.rootPokemonURL, completion: completion)
+    }
+    
+    func update(completion: SuccessHandler) {
+        // implement at some point
+    }
+    
+    func delete(completion: SuccessHandler) {
+        // implement at some point
     }
     
     private func downloadDataFromEndpoint(endpoint: NSURL, completion: SuccessHandler) {
