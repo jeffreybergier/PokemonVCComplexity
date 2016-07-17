@@ -24,6 +24,6 @@
 
 import UIKit
 
-class BottomViewController: CRUDViewController {
+class BottomViewController: SegueViewController {
     
 }

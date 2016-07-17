@@ -12,6 +12,9 @@
 		5014033E1D3BE7D0001EBA57 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014033D1D3BE7D0001EBA57 /* LoadingView.swift */; };
 		501403401D3BE8EF001EBA57 /* CRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014033F1D3BE8EF001EBA57 /* CRUDViewController.swift */; };
 		501403421D3BEE1B001EBA57 /* JSBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501403411D3BEE1B001EBA57 /* JSBTableViewController.swift */; };
+		501403441D3C31EA001EBA57 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501403431D3C31EA001EBA57 /* SegueViewController.swift */; };
+		501403461D3C38D3001EBA57 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501403451D3C38D3001EBA57 /* AddViewController.swift */; };
+		501403481D3C3A58001EBA57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501403471D3C3A58001EBA57 /* DetailViewController.swift */; };
 		509B58D71D3BC8F0009981C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B58D61D3BC8F0009981C8 /* AppDelegate.swift */; };
 		509B58DC1D3BC8F0009981C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509B58DA1D3BC8F0009981C8 /* Main.storyboard */; };
 		509B58DE1D3BC8F0009981C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509B58DD1D3BC8F0009981C8 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		5014033D1D3BE7D0001EBA57 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		5014033F1D3BE8EF001EBA57 /* CRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUDViewController.swift; sourceTree = "<group>"; };
 		501403411D3BEE1B001EBA57 /* JSBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSBTableViewController.swift; sourceTree = "<group>"; };
+		501403431D3C31EA001EBA57 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		501403451D3C38D3001EBA57 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		501403471D3C3A58001EBA57 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		509B58D31D3BC8F0009981C8 /* PokemonVCComplexity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonVCComplexity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509B58D61D3BC8F0009981C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509B58DB1D3BC8F0009981C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +72,10 @@
 				501403391D3BD99A001EBA57 /* PokemonDataSource.swift */,
 				501403411D3BEE1B001EBA57 /* JSBTableViewController.swift */,
 				5014033F1D3BE8EF001EBA57 /* CRUDViewController.swift */,
+				501403431D3C31EA001EBA57 /* SegueViewController.swift */,
 				5014033B1D3BDFC6001EBA57 /* BottomViewController.swift */,
+				501403451D3C38D3001EBA57 /* AddViewController.swift */,
+				501403471D3C3A58001EBA57 /* DetailViewController.swift */,
 				5014033D1D3BE7D0001EBA57 /* LoadingView.swift */,
 				509B58DA1D3BC8F0009981C8 /* Main.storyboard */,
 				509B58DD1D3BC8F0009981C8 /* Assets.xcassets */,
@@ -147,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501403481D3C3A58001EBA57 /* DetailViewController.swift in Sources */,
+				501403441D3C31EA001EBA57 /* SegueViewController.swift in Sources */,
 				501403401D3BE8EF001EBA57 /* CRUDViewController.swift in Sources */,
+				501403461D3C38D3001EBA57 /* AddViewController.swift in Sources */,
 				501403421D3BEE1B001EBA57 /* JSBTableViewController.swift in Sources */,
 				5014033A1D3BD99A001EBA57 /* PokemonDataSource.swift in Sources */,
 				5014033E1D3BE7D0001EBA57 /* LoadingView.swift in Sources */,

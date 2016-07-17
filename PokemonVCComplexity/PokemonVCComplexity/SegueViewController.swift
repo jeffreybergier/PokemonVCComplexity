@@ -24,39 +24,27 @@
 
 import UIKit
 
-class JSBTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SegueViewController: CRUDViewController {
     
-    @IBOutlet private(set) weak var tableView: UITableView?
-    
-    var pokemon: [Pokemon] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).pokemonDataSource.pokemon
+    enum StoryboardSegue: String {
+        case DetailShowSegue
+        case NewModalSegue
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if let selectedIndexPath = self.tableView?.indexPathForSelectedRow {
-            self.tableView?.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier, let segueType = StoryboardSegue(rawValue: identifier) else { return }
+        switch segueType {
+        case .DetailShowSegue:
+            let indexPath = self.tableView!.indexPathForCell(sender as! UITableViewCell)!
+            let destVC = segue.destinationViewController as? DetailViewController
+            destVC?.delegate = self
+            destVC?.pokemonIndex = PokemonIndex(indexPath: indexPath, pokemon: self.pokemon[indexPath.row])
+        case .NewModalSegue:
+            let navVC = segue.destinationViewController as? UINavigationController
+            let destVC = navVC?.viewControllers.first as? AddViewController
+            destVC?.delegate = self
         }
     }
     
-    func dataUpdated() {
-        self.tableView?.reloadData()
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.pokemon.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PokemonCell", forIndexPath: indexPath)
-        cell.textLabel?.text = self.pokemon[indexPath.row].name
-        return cell
-    }
+    @IBAction func unwind(segue: UIStoryboardSegue) { }
 }

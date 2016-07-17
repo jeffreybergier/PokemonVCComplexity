@@ -27,8 +27,13 @@ import Foundation
 typealias SuccessHandler = (Bool -> Void)
 
 struct Pokemon {
-    var url: NSURL
+    var URL: NSURL
     var name: String
+    
+    init(name: String, URL: NSURL) {
+        self.name = name
+        self.URL = URL
+    }
     
     init?(dictionary: NSDictionary) {
         if
@@ -36,7 +41,7 @@ struct Pokemon {
             let url = NSURL(string: urlString),
             let name = dictionary["name"] as? String
         {
-            self.url = url
+            self.URL = url
             self.name = name
         }
         else
@@ -50,8 +55,9 @@ class PokemonDataSource {
     
     private(set) var pokemon = [Pokemon]()
     
-    func create(completion: SuccessHandler) {
-        // implement at some point
+    func create(pokemon pokemon: Pokemon, completion: SuccessHandler) {
+        self.pokemon.insert(pokemon, atIndex: 0)
+        completion(true)
     }
     
     func read(completion: SuccessHandler) {
@@ -68,8 +74,9 @@ class PokemonDataSource {
         // implement at some point
     }
     
-    func delete(completion: SuccessHandler) {
-        // implement at some point
+    func deletePokemon(indexPath indexPath: NSIndexPath, completion: SuccessHandler) {
+        self.pokemon.removeAtIndex(indexPath.row)
+        completion(true)
     }
     
     private func downloadDataFromEndpoint(endpoint: NSURL, completion: SuccessHandler) {
