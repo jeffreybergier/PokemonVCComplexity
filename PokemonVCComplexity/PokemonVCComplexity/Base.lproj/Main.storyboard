@@ -25,7 +25,7 @@
         <!--Pokemon-->
         <scene sceneID="yKY-DA-SFv">
             <objects>
-                <viewController title="Pokemon" id="vqa-nv-ufd" customClass="PokemonBaseViewController" customModule="PokemonVCComplexity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pokemon" id="vqa-nv-ufd" customClass="BottomViewController" customModule="PokemonVCComplexity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ePp-6m-1ff"/>
                         <viewControllerLayoutGuide type="bottom" id="sXw-RN-GnK"/>
@@ -57,20 +57,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-W7-Q8S" customClass="LoadingView" customModule="PokemonVCComplexity" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-VN-CAV">
+                                        <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uW8-VN-CAV" firstAttribute="centerY" secondItem="XnC-W7-Q8S" secondAttribute="centerY" id="SHC-Nb-Tn0"/>
+                                    <constraint firstItem="uW8-VN-CAV" firstAttribute="centerX" secondItem="XnC-W7-Q8S" secondAttribute="centerX" id="hHs-Xx-YpJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="spinner" destination="uW8-VN-CAV" id="tbW-nP-dHR"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U0g-re-gCI" firstAttribute="height" secondItem="D9k-5M-cXh" secondAttribute="height" id="SeL-EE-g6K"/>
                             <constraint firstItem="U0g-re-gCI" firstAttribute="centerX" secondItem="D9k-5M-cXh" secondAttribute="centerX" id="axg-zU-wzT"/>
+                            <constraint firstItem="XnC-W7-Q8S" firstAttribute="height" secondItem="U0g-re-gCI" secondAttribute="height" id="c1i-VL-v8d"/>
+                            <constraint firstItem="XnC-W7-Q8S" firstAttribute="centerX" secondItem="U0g-re-gCI" secondAttribute="centerX" id="dBE-0p-gk6"/>
+                            <constraint firstItem="XnC-W7-Q8S" firstAttribute="width" secondItem="U0g-re-gCI" secondAttribute="width" id="dEt-8N-M9a"/>
                             <constraint firstItem="U0g-re-gCI" firstAttribute="centerY" secondItem="D9k-5M-cXh" secondAttribute="centerY" id="q5h-zb-T0z"/>
+                            <constraint firstItem="XnC-W7-Q8S" firstAttribute="centerY" secondItem="U0g-re-gCI" secondAttribute="centerY" id="x7M-cM-23r"/>
                             <constraint firstItem="U0g-re-gCI" firstAttribute="width" secondItem="D9k-5M-cXh" secondAttribute="width" id="zxw-Je-eB5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon" id="RWz-Pq-EVv"/>
+                    <connections>
+                        <outlet property="loadingView" destination="XnC-W7-Q8S" id="TJk-MQ-RxS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkD-Nr-hfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="426"/>
+            <point key="canvasLocation" x="827" y="426"/>
         </scene>
     </scenes>
 </document>

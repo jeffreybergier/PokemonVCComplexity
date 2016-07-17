@@ -32,12 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        self.pokemonDataSource.read() { success in
-            for p in self.pokemonDataSource.pokemon {
-                print(p.name)
-            }
-        }
-        
         return true
     }
 }

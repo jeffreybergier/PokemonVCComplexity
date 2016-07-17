@@ -57,7 +57,11 @@ class PokemonDataSource {
     func read(completion: SuccessHandler) {
         self.pokemon = []
         let rootPokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
-        self.downloadDataFromEndpoint(rootPokemonURL, completion: completion)
+        self.downloadDataFromEndpoint(rootPokemonURL) { success in
+            dispatch_async(dispatch_get_main_queue()) {
+                completion(success)
+            }
+        }
     }
     
     func update(completion: SuccessHandler) {
@@ -87,7 +91,8 @@ class PokemonDataSource {
             // see if there are more pokemon
             if let nextURLString = dictionary["next"] as? String, let nextURL = NSURL(string: nextURLString) {
                 // if so, repeat
-                self.downloadDataFromEndpoint(nextURL, completion: completion)
+                completion(true)
+                //self.downloadDataFromEndpoint(nextURL, completion: completion)
             } else {
                 // if not, finish
                 completion(true)

@@ -92,8 +92,7 @@ class PokemonDataSource {
             // see if there are more pokemon
             if let nextURLString = dictionary["next"] as? String, let nextURL = NSURL(string: nextURLString) {
                 // if so, repeat
-                completion(true)
-                //self.downloadDataFromEndpoint(nextURL, completion: completion)
+                self.downloadDataFromEndpoint(nextURL, completion: completion)
             } else {
                 // if not, finish
                 completion(true)

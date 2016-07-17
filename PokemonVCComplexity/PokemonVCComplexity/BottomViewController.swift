@@ -24,6 +24,6 @@
 
 import UIKit
 
-class PokemonBaseViewController: UIViewController {
+class BottomViewController: CRUDViewController {
     
 }
