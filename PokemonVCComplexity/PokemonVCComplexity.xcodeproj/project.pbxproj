@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5014033A1D3BD99A001EBA57 /* PokemonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501403391D3BD99A001EBA57 /* PokemonDataSource.swift */; };
+		5014033C1D3BDFC6001EBA57 /* PokemonVCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014033B1D3BDFC6001EBA57 /* PokemonVCBase.swift */; };
 		509B58D71D3BC8F0009981C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B58D61D3BC8F0009981C8 /* AppDelegate.swift */; };
 		509B58DC1D3BC8F0009981C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509B58DA1D3BC8F0009981C8 /* Main.storyboard */; };
 		509B58DE1D3BC8F0009981C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509B58DD1D3BC8F0009981C8 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		501403391D3BD99A001EBA57 /* PokemonDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDataSource.swift; sourceTree = "<group>"; };
+		5014033B1D3BDFC6001EBA57 /* PokemonVCBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonVCBase.swift; sourceTree = "<group>"; };
 		509B58D31D3BC8F0009981C8 /* PokemonVCComplexity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonVCComplexity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509B58D61D3BC8F0009981C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509B58DB1D3BC8F0009981C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				509B58D61D3BC8F0009981C8 /* AppDelegate.swift */,
 				501403391D3BD99A001EBA57 /* PokemonDataSource.swift */,
+				5014033B1D3BDFC6001EBA57 /* PokemonVCBase.swift */,
 				509B58DA1D3BC8F0009981C8 /* Main.storyboard */,
 				509B58DD1D3BC8F0009981C8 /* Assets.xcassets */,
 				509B58DF1D3BC8F0009981C8 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5014033A1D3BD99A001EBA57 /* PokemonDataSource.swift in Sources */,
+				5014033C1D3BDFC6001EBA57 /* PokemonVCBase.swift in Sources */,
 				509B58D71D3BC8F0009981C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

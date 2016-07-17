@@ -20,12 +20,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AR-UH-cO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="461"/>
+            <point key="canvasLocation" x="445" y="426"/>
         </scene>
         <!--Pokemon-->
         <scene sceneID="yKY-DA-SFv">
             <objects>
-                <viewController title="Pokemon" id="vqa-nv-ufd" sceneMemberID="viewController">
+                <viewController title="Pokemon" id="vqa-nv-ufd" customClass="PokemonBaseViewController" customModule="PokemonVCComplexity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ePp-6m-1ff"/>
                         <viewControllerLayoutGuide type="bottom" id="sXw-RN-GnK"/>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkD-Nr-hfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="536" y="461"/>
+            <point key="canvasLocation" x="824" y="426"/>
         </scene>
     </scenes>
 </document>
