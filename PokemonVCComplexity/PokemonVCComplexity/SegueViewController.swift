@@ -24,6 +24,11 @@
 
 import UIKit
 
+struct PokemonIndex {
+    var indexPath: NSIndexPath
+    var pokemon: Pokemon
+}
+
 class SegueViewController: CRUDViewController {
     
     enum StoryboardSegue: String {

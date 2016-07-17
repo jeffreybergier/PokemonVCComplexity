@@ -24,11 +24,6 @@
 
 import UIKit
 
-struct PokemonIndex {
-    var indexPath: NSIndexPath
-    var pokemon: Pokemon
-}
-
 protocol AddPokemonDelegate: class {
     func viewController(viewController: UIViewController, addPokemonWithName name: String, URL: NSURL)
 }
