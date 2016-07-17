@@ -54,9 +54,10 @@ class PokemonDataSource {
         // implement at some point
     }
     
-    private let rootPokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
     func read(completion: SuccessHandler) {
-        self.downloadDataFromEndpoint(self.rootPokemonURL, completion: completion)
+        self.pokemon = []
+        let rootPokemonURL = NSURL(string: "https://pokeapi.co/api/v2/pokemon")!
+        self.downloadDataFromEndpoint(rootPokemonURL, completion: completion)
     }
     
     func update(completion: SuccessHandler) {
@@ -93,5 +94,4 @@ class PokemonDataSource {
             }
         }).resume()
     }
-    
 }
