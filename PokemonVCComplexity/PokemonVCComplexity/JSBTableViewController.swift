@@ -28,7 +28,7 @@ class JSBTableViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet private(set) weak var tableView: UITableView?
     
-    var data = [Pokemon]()
+    var data = [Pokemon]() // make this generic if you wish. There's no need for this view controller to even know what a Pokemon is
     
     override func viewDidLoad() {
         super.viewDidLoad()

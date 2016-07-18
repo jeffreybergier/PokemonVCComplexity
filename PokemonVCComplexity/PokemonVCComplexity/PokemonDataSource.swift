@@ -22,6 +22,8 @@
 //
 //
 
+// notice I did not import UIKit here. Ideally a model should be cross platform and independent of the UI
+// the most common exception to that is UIImage which can be unfortunate.
 import Foundation
 
 typealias SuccessHandler = (Bool -> Void)
