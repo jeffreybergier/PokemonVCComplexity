@@ -56,6 +56,12 @@ class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePoke
         super.dataUpdated()
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            self.viewController(self, deletePokemonAtIndexPath: indexPath)
+        }
+    }
+    
     func viewController(viewController: UIViewController, addPokemonWithName name: String, URL: NSURL) {
         let newPokemon = Pokemon(name: name, URL: URL)
         self.dataSource.create(pokemon: newPokemon) { succes in
