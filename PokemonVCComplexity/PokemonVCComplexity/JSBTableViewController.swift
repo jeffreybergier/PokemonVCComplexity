@@ -58,20 +58,3 @@ class JSBTableViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

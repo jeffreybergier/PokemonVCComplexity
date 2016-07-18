@@ -70,19 +70,3 @@ class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePoke
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
