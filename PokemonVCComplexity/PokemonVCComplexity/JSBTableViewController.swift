@@ -28,9 +28,7 @@ class JSBTableViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet private(set) weak var tableView: UITableView?
     
-    var pokemon: [Pokemon] {
-        return (UIApplication.sharedApplication().delegate as! AppDelegate).pokemonDataSource.pokemon
-    }
+    var data = [Pokemon]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +49,29 @@ class JSBTableViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.pokemon.count
+        return self.data.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PokemonCell", forIndexPath: indexPath)
-        cell.textLabel?.text = self.pokemon[indexPath.row].name
+        cell.textLabel?.text = self.data[indexPath.row].name
         return cell
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

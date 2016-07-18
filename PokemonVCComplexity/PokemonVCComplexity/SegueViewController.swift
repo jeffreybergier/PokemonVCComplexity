@@ -43,7 +43,7 @@ class SegueViewController: CRUDViewController {
             let indexPath = self.tableView!.indexPathForCell(sender as! UITableViewCell)!
             let destVC = segue.destinationViewController as? DetailViewController
             destVC?.delegate = self
-            destVC?.pokemonIndex = PokemonIndex(indexPath: indexPath, pokemon: self.pokemon[indexPath.row])
+            destVC?.pokemonIndex = PokemonIndex(indexPath: indexPath, pokemon: self.data[indexPath.row])
         case .NewModalSegue:
             let navVC = segue.destinationViewController as? UINavigationController
             let destVC = navVC?.viewControllers.first as? AddViewController

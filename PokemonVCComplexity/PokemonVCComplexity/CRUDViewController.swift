@@ -35,8 +35,8 @@ protocol DeletePokemonDelegate: class {
 class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePokemonDelegate {
     
     @IBOutlet private weak var loadingView: LoadingView?
-    
-    var dataSource: PokemonDataSource {
+        
+    private var dataSource: PokemonDataSource {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).pokemonDataSource
     }
     
@@ -51,10 +51,10 @@ class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePoke
     }
     
     override func dataUpdated() {
+        self.data = self.dataSource.pokemon
+        print("Pokemon Data Updated. \(self.data.count) Total Pokemon")
         super.dataUpdated()
-        print("Pokemon Data Updated. \(self.pokemon.count) Total Pokemon")
     }
-    
     
     func viewController(viewController: UIViewController, addPokemonWithName name: String, URL: NSURL) {
         let newPokemon = Pokemon(name: name, URL: URL)
@@ -70,3 +70,19 @@ class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePoke
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
