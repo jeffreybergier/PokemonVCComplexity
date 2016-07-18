@@ -64,7 +64,7 @@ class CRUDViewController: JSBTableViewController, AddPokemonDelegate, DeletePoke
     }
     
     func viewController(viewController: UIViewController, deletePokemonAtIndexPath indexPath: NSIndexPath) {
-        self.dataSource.deletePokemon(indexPath: indexPath) { success in
+        self.dataSource.deletePokemonAt(indexPath: indexPath) { success in
             self.dataUpdated()
         }
     }

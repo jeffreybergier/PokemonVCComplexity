@@ -74,7 +74,7 @@ class PokemonDataSource {
         // implement at some point
     }
     
-    func deletePokemon(indexPath indexPath: NSIndexPath, completion: SuccessHandler) {
+    func deletePokemonAt(indexPath indexPath: NSIndexPath, completion: SuccessHandler) {
         self.pokemon.removeAtIndex(indexPath.row)
         completion(true)
     }
@@ -98,8 +98,8 @@ class PokemonDataSource {
             // see if there are more pokemon
             if let nextURLString = dictionary["next"] as? String, let nextURL = NSURL(string: nextURLString) {
                 // if so, repeat
-                completion(true)
-                //self.downloadDataFromEndpoint(nextURL, completion: completion)
+                completion(true) // if you just want the first 20
+                //self.downloadDataFromEndpoint(nextURL, completion: completion) // if you want to wait for all pokemon
             } else {
                 // if not, finish
                 completion(true)
